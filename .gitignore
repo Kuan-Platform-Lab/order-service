@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate*
+*.tfvars
+.env
+build/
+target/
+node_modules/
+.idea/
+.vscode/
