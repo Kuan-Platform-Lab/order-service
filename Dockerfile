@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM gradle:8-jdk21 AS build
+FROM --platform=$BUILDPLATFORM gradle:8-jdk21 AS build
 WORKDIR /src
 COPY gradlew settings.gradle build.gradle ./
 COPY gradle gradle

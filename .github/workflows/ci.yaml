@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  ci:
+    uses: Kuan-Platform-Lab/platform-workflows/.github/workflows/java-service.yaml@main
+    with:
+      service: order-service
+    secrets: inherit
